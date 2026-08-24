@@ -127,6 +127,7 @@ li.close-btn img{
 }
 
 .account-content .avatar {
+    border: 2px solid transparent;
     display: flex;
     cursor: pointer;
 }
@@ -387,11 +388,6 @@ button.checkout-btn {
     background-color: white;
 }
 
-.thumbnail-item:hover,
-.lightbox-thumbnail-item:hover {
-    opacity: 0.6;
-}
-
 .thumbnail-item.active img,
 .lightbox-thumbnail-item.active img{
     opacity: 0.6;
@@ -399,7 +395,7 @@ button.checkout-btn {
 
 .thumbnail-item.active,
 .lightbox-thumbnail-item.active {
-    border: 3px solid var(--orange-color);
+    outline: 3px solid var(--orange-color);
 }
 
 .thumbnail-item img,
