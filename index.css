@@ -17,6 +17,7 @@
     --white-color: hsl(0, 0%, 100%);
     --black-color: hsl(0, 0%, 0%);
     --overlay-bg: rgba(0, 0, 0, 0.5);
+    --attribution-color: hsl(228, 45%, 44%);
 }
 
 body {
@@ -86,7 +87,7 @@ li.close-btn img{
     display: flex;
     list-style: none;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--white-color);
     width: 70%;
     gap: 1.5rem;
     font-weight: 700;
@@ -143,7 +144,7 @@ li.close-btn img{
 
 .wrapper-basket {
     display: none;
-    background-color: white;
+    background-color: var(--white-color);
     position: absolute;
     top: 8%;
     left: 0;
@@ -241,7 +242,7 @@ li.close-btn img{
 
 .basket-item-result {
     font-weight: 700;
-    color: black;
+    color: var(--black-color);
 }
 
 .basket-btn {
@@ -270,7 +271,7 @@ button.checkout-btn {
     display: none;
     position: absolute;
     z-index: 1003;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: var(--overlay-bg);
     top: 0;
     right: 0;
     bottom: 0;
@@ -385,7 +386,7 @@ button.checkout-btn {
     cursor: pointer;
     display: flex;
     overflow: hidden;
-    background-color: white;
+    background-color: var(--white-color);
 }
 
 .thumbnail-item.active img,
@@ -448,8 +449,8 @@ button.checkout-btn {
 }
 
 .percent-discount {
-    color: white;
-    background-color: black;
+    color: var(--white-color);
+    background-color: var(--black-color);
     font-weight: 700;
     padding: 0.2rem 0.5rem;
     border-radius: .4rem;
@@ -501,7 +502,7 @@ button.add-cart {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    color: black;
+    color: var(--black-color);
 }
 
 .amount-cart-btn {
@@ -519,7 +520,7 @@ button.add-cart {
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--attribution-color); 
 }
 
 @media (min-width: 80rem) {
