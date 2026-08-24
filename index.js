@@ -31,7 +31,7 @@ checkoutBtn.addEventListener('click', function () {
 addCartBtn.addEventListener('click', function () {
     const imgActive = document.querySelector('.thumbnail-item.active img');
     if (parseFloat(amountResult.innerHTML) >= 1) {
-        let basketItemData = {
+        const basketItemData = {
             indexItem: imgActive.getAttribute('data-src'),
             imageSrc: imgActive.getAttribute('src'),
             price: 125.00,
@@ -74,18 +74,18 @@ closeLightboxBtn.addEventListener('click', function () {
     wrapperLightbox.classList.remove('active')
 })
 
-minusBtn.addEventListener('click', function (e) {
+minusBtn.addEventListener('click', function () {
     decreaseNumberCart();
     amountResult.innerHTML = numberCart;
 })
 
-plusBtn.addEventListener('click', function (e) {
+plusBtn.addEventListener('click', function () {
     increaseNumberCart();
     amountResult.innerHTML = numberCart;
 })
 
 prevBtns.forEach(prev => {
-    prev.addEventListener('click', function (e) {
+    prev.addEventListener('click', function () {
         decreaseNumberImg();
         lightboxMainProductImg.setAttribute('src', `./images/image-product-${numberImg}.jpg`);
         mainProductImg.setAttribute('src', `./images/image-product-${numberImg}.jpg`);
@@ -94,7 +94,7 @@ prevBtns.forEach(prev => {
 })
 
 nextBtns.forEach(next => {
-    next.addEventListener('click', function (e) {
+    next.addEventListener('click', function () {
         increaseNumberImg();
         lightboxMainProductImg.setAttribute('src', `./images/image-product-${numberImg}.jpg`);
         mainProductImg.setAttribute('src', `./images/image-product-${numberImg}.jpg`);
@@ -102,22 +102,22 @@ nextBtns.forEach(next => {
     })
 })
 
-menuNavBtn.addEventListener('click', function (e) {
+menuNavBtn.addEventListener('click', function () {
     wrapperNav.classList.add('active');
 })
 
-closeMenuBtn.addEventListener('click', function (e) {
+closeMenuBtn.addEventListener('click', function () {
     wrapperNav.classList.remove('active');
 })
 
-wrapperNav.addEventListener('click', function (e) {
+wrapperNav.addEventListener('click', function () {
     if (e.target === wrapperNav) {
         wrapperNav.classList.remove('active');
     }
 })
 
 allThumbnailBtn.forEach(thumbnailBtn => {
-    thumbnailBtn.addEventListener('click', function (e) {
+    thumbnailBtn.addEventListener('click', function () {
         if (!this.classList.contains('active')) {
             const imgElement = this.querySelector('img');
             const dataIndex = imgElement.getAttribute('data-src'); 
