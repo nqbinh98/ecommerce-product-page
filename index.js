@@ -110,7 +110,7 @@ closeMenuBtn.addEventListener('click', function () {
     wrapperNav.classList.remove('active');
 })
 
-wrapperNav.addEventListener('click', function () {
+wrapperNav.addEventListener('click', function (e) {
     if (e.target === wrapperNav) {
         wrapperNav.classList.remove('active');
     }
